@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--It appears to be a basic HTML code for a webpage's header section. It includes meta tags
+     for specifying the character set, browser compatibility, and viewport settings. It also specifies the page's 
+    title and links to an external stylesheet called "style.css" which likely contains the page's styling rules.-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login & Signup Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="wrapper">
+      <!--This appears to be a section of HTML code for a signup form on a webpage.
+         The form has a "Full name" input field, an "Email address" input field, and a "Password" input field,
+          all of which are required. There is also a checkbox input for accepting the terms and conditions, 
+          and a "Signup" button for submitting the form. The form is contained within a div element with the class
+         "form signup", and has a header element with the text "Signup".-->
+      <div class="form signup">
+        <header>Signup</header>
+        <form action="#">
+          <input type="text" placeholder="Full name" required />
+          <input type="text" placeholder="Email address" required />
+          <input type="password" placeholder="Password" required />
+          <div class="checkbox">
+            <input type="checkbox" id="signupCheck" />
+            <label for="signupCheck">I accept all terms & conditions</label>
+          </div>
+          <input type="submit" value="Signup" />
+        </form>
+      </div>
+      <!--This appears to be a section of HTML code for a login form on a webpage.
+         The form has an "Email address" input field and a "Password" input field, both of which are required.
+          There is also a "Forgot password?" link,
+           and a "Login" button for submitting the form. The form is contained within 
+           a div element with the class "form login",
+         and has a header element with the text "Login".-->
+      <div class="form login">
+        <header>Login</header>
+        <form action="#">
+          <input type="text" placeholder="Email address" required />
+          <input type="password" placeholder="Password" required />
+          <a href="#">Forgot password?</a>
+          <input type="submit" value="Login" />
+        </form>
+      </div>
+      <!--This appears to be a section of JavaScript code that adds interactivity to a webpage.
+         It selects the HTML elements with the classes "wrapper", "signup header", 
+         and "login header".
+          It then adds an event listener to the "login header" element that listens for a "click" event.
+           When the "login header" element is clicked, the "active" class is added to the "wrapper" element. 
+           It also adds an event listener to the "signup header" element that listens for a "click" event.
+            When the "signup header" element is clicked, the "active" class is removed from the "wrapper" element.
+         This code appears to be part of a script that toggles between a login form and a signup form on a webpage.-->
+      <script>
+        const wrapper = document.querySelector(".wrapper"),
+          signupHeader = document.querySelector(".signup header"),
+          loginHeader = document.querySelector(".login header");
+
+        loginHeader.addEventListener("click", () => {
+          wrapper.classList.add("active");
+        });
+        signupHeader.addEventListener("click", () => {
+          wrapper.classList.remove("active");
+        });
+      </script>
+    </section>
+  </body>
+</html>
